@@ -4,14 +4,19 @@ Reilly, J.P. Survey of numerical electrostimulation models. Physics in Medicine 
 <strong>Developer:</strong> N.T. Carnevale, Neuroscience Department, Yale Medical School, New Haven, CT.<p></p>
 
 <h3>Usage</h3>
-Unzip the zip file.<br>
+Auto-launch from ModelDB, or unzip the zip file.<br>
 Use mknrndll (OS X or MSWin) or nrnivmodl (UNIX/Linux) to compile the mod files.<br>
-Then launch one of the main programs:<br>
+Then launch mosinit.hoc ("nrngui mosinit.hoc" in unix/linux) and <br>
+choose a button or individually run one of the main programs:<br>
 for cases A1-12 (see Reilly 2016): nrngui initA.hoc<br>
 for cases B13, 14, 16, and 17 with a 5 um diameter axon: nrngui initB5.hoc<br>
 for cases B13, 14, 16, and 17 with a 10 um diameter axon: nrngui initB10.hoc<br>
 Then follow the instructions that the program prints to its terminal.<p></p>
-
+As the program runs traces of voltage are displayed on the screen.  <br>
+For example the 10 um diam case ends with one of the graphs displaying: <br>
+<img src="./screenshot2.png"  alt="screenshot" width="550"> <br>
+Note that the values printed on the command line correspond to the "I" traces in figures 1 and 2 in the paper. <br>
+Those should match those in comments at the end of each program. <br>
 <h3>Description of code</h3>
 This code implements NEURON models of extracellular stimulation of the Frankenhaeuser-Huxley (F-H) model of myelinated axon (in particular, an A fiber). Parameters are from (Frankenhaeuser and Huxley 1964), (Hines and Shrager 1991), and page 3 of "Survey of nerve electrostimulation models" dated 11/29/2014 and provided by J.P. Reilly (see comments in the source code). Pertinent differences relative to McNeal model (1976): McNeal used 110 ohm cm for cytoplasmic resistivity, as did Frankenhaeuser and Huxley (1964), but this model uses 100, following Reilly and Diamant (2011).<p></p>
 
